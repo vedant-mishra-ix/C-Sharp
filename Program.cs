@@ -1,12 +1,24 @@
 ﻿using System;
 using System.Linq;
+using Control_Statement_Assignment_Basic;
 
-namespace Control_Statement_Assignment_Basic
+namespace control_statement_assignment_basic
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Properties ved = new Properties();
+            ved.Show();
+            ved.name = "abhishek";
+            Console.WriteLine("Private properties:"+ ved.name);
+
+            int a = 10;
+           // int b = a + ++a + a++;
+            Console.WriteLine(a + " = " + ++a + " = " + a++);
+            // Console.WriteLine("Prefix and Postfix: " + b);
+            //   Console.WriteLine("Properties value: "+ ved.first_name);
+
             /*
                                                                             * if-else statement
              
@@ -185,6 +197,24 @@ namespace Control_Statement_Assignment_Basic
             }
             Console.WriteLine("Factorial number of " + number + " is " + fact);
             */
+
+            int Age_store = Age(19);
+            Console.WriteLine("Age Store value: " + Age_store);
+
+            int Age(int age)
+            {
+                if(age > 18)
+                {
+                    Console.WriteLine("You are eligible for voting");
+                    return age;                           // if condition ke base per value return krega
+                }
+                else                                                                
+                {
+                    Console.WriteLine("you are not eligible for voting");
+                    return age;
+                }
+                return 0;                                  // agar hum yaa per return age likte to jo value humm pass krte  wai value return krta hmesa
+            }
 
         //    float a;
         //    a = float.Parse(Console.ReadLine());
