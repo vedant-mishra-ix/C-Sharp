@@ -8,23 +8,33 @@ namespace control_statement_assignment_basic
     {
         static void Main(string[] args)
         {
-            Properties ved = new Properties();
-            ved.Show();
-            ved.name = "abhishek";
-            Console.WriteLine("Private properties:"+ ved.name);
+            Properties obj = new Properties();
+
+            obj.Show();
+
+            obj.name = "abhishek";
+
+            Console.WriteLine("Private properties:"+ obj.name);
 
             int a = 10;
+
            // int b = a + ++a + a++;
+
             Console.WriteLine(a + " = " + ++a + " = " + a++);
+
             // Console.WriteLine("Prefix and Postfix: " + b);
+
             //   Console.WriteLine("Properties value: "+ ved.first_name);
 
             /*
                                                                             * if-else statement
              
             int age;
+
             Console.WriteLine("Hi Please Enter The Your Age:");
+
             age = Convert.ToInt32(Console.ReadLine());
+
             if(age > 18)
             {
                 Console.WriteLine("You are eligible for voting");
@@ -38,13 +48,19 @@ namespace control_statement_assignment_basic
             /*                                                               nested if statement
                                                              
             string first_name;
+
             int roll_no;
+
             Console.WriteLine("Please enter you roll no:(1 to 10):");
+
             roll_no = Convert.ToInt32(Console.ReadLine());
+
             if(roll_no < 10)
             {
                 Console.WriteLine("Now Please enter your name (Type: vedant)");
+
                 first_name = Console.ReadLine();
+
                 if(first_name == "vedant")
                 {
                     Console.WriteLine("Now you can see your details");
@@ -64,13 +80,19 @@ namespace control_statement_assignment_basic
                                                                             if-else-if ladder
              
             int marks;
+
             int roll_no;
+
             Console.WriteLine("Please enter the student roll no (1 to 10):");
+
             roll_no = Convert.ToInt32(Console.ReadLine());
+
             if(roll_no < 10)
             {
                 Console.WriteLine("Please enter the student marks for displaying grades:");
+
                 marks = Convert.ToInt32(Console.ReadLine());
+
                 if(marks >= 90 && marks <= 100)
                 {
                     Console.WriteLine("Congrats you got A+ Grade");
@@ -114,8 +136,11 @@ namespace control_statement_assignment_basic
              *                                                                Switch case 
              
             string color;
+
             Console.WriteLine("Enter the first letter of color (g,b,r,w):");
+
             color = Console.ReadLine();
+
             switch(color)
             {
                 case "g":
@@ -140,9 +165,13 @@ namespace control_statement_assignment_basic
              *                                                               For Loop 
              
             int number;
+
             int fact = 1;
+
             Console.WriteLine("Which number you want to know factorial:");
+
             number = Convert.ToInt32(Console.ReadLine());
+
             for(int i = 1; i <= number; i++)
             {
                 fact = fact * i;
@@ -154,13 +183,19 @@ namespace control_statement_assignment_basic
              *                                                                 While Loop
              
             int number;
+
             int fact = 1;
+
             int i = 1;
+
             Console.WriteLine("Which number you want to know factorial:");
+
             number = Convert.ToInt32(Console.ReadLine());
+
             while(i <= number)
             {
                 fact = fact * i;
+
                 i++;
             }
             Console.WriteLine("Factorial number of " + number + " is " + fact);
@@ -170,14 +205,21 @@ namespace control_statement_assignment_basic
              *                                                               Do While Loop
              
             int number;
+
             int fact = 1;
+
             int i = 1;
+
             Console.WriteLine("Which number you want to know factorial:");
+
             number = Convert.ToInt32(Console.ReadLine());
+
             do
             {
                 i++;
+
                 Console.WriteLine("Factorial number of " + number + " is " + fact);
+
                 fact = fact * i;
                 
             } while (i <= number);
@@ -188,9 +230,13 @@ namespace control_statement_assignment_basic
              *                                                              ForEach Loop 
              
             int number;
+
             int fact = 1;
+
             Console.WriteLine("Which number you want to know factorial:");
+
             number = Convert.ToInt32(Console.ReadLine());
+
             foreach(int i in Enumerable.Range(1,number))
             {
                 fact = fact * i;
@@ -199,6 +245,7 @@ namespace control_statement_assignment_basic
             */
 
             int Age_store = Age(19);
+
             Console.WriteLine("Age Store value: " + Age_store);
 
             int Age(int age)
@@ -216,10 +263,33 @@ namespace control_statement_assignment_basic
                 return 0;                                  // agar hum yaa per return age likte to jo value humm pass krte  wai value return krta hmesa
             }
 
-        //    float a;
-        //    a = float.Parse(Console.ReadLine());
-         //   Console.WriteLine("type cast: " + a);  // for checking type casting
-           
+            //    float a;
+
+            //    a = float.Parse(Console.ReadLine());
+
+            //   Console.WriteLine("type cast: " + a);  // for checking type casting
+
+            string s = "ved";
+
+        //  string s1 = new string("ved");
+
+            string s2 = "ved";
+
+           // Console.WriteLine("String literal: " + s + " String by new kwyword: " + s1);
+
+            //if(s == s1)
+            //{
+            //    Console.WriteLine("Value matched");     same value match ho rhi
+            //}
+
+            if(s == s2)
+            {
+                Console.WriteLine("Value matched");
+            }
+            else
+            {
+                Console.WriteLine("Value does not matched");
+            }
 
         }
     }
